@@ -4,46 +4,6 @@
   --home-peach: #f5d9ca;
 }
 
-.brand-face {
-  position: absolute;
-  inset: 16% auto auto 6.3%;
-  width: 9.8%;
-  height: 17%;
-  pointer-events: none;
-}
-
-.brand-eyes {
-  position: absolute;
-  inset: 0 0 auto;
-  display: flex;
-  justify-content: space-between;
-  height: 53%;
-}
-
-.brand-eye {
-  display: grid;
-  place-items: center;
-  width: 41%;
-  border-radius: 50%;
-  background: var(--paper);
-}
-
-.brand-eye > span {
-  width: 60%;
-  height: 60%;
-  border-radius: 50%;
-  background: var(--plum);
-  transition: translate 90ms ease-out;
-}
-
-.brand-smile {
-  position: absolute;
-  inset: auto 29% 4%;
-  height: 28%;
-  border-bottom: clamp(.8px, .1vw, 1.4px) solid var(--plum);
-  border-radius: 0 0 50% 50%;
-}
-
 .home .hero-sun {
   top: 3%;
   right: -1%;
