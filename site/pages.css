@@ -60,6 +60,9 @@
 .page-hero-split { display: grid; grid-template-columns: 1fr .9fr; align-items: center; gap: clamp(20px, 6vw, 84px); }
 .page-hero-split h1 { text-wrap: wrap; }
 .page-hero-split img { aspect-ratio: 1.43; object-fit: cover; border-radius: 24px 44% 24px 24px; }
+.branch-photo-hero { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(22px, 5vw, 76px); }
+.branch-photo-hero h1 { font-size: clamp(2rem, 5.05vw, 5.15rem); overflow-wrap: anywhere; }
+.branch-photo-hero > img { width: 100%; }
 .page-section { padding-block: clamp(42px, 6.4vw, 88px); }
 .page-section h2 { margin-bottom: 23px; }
 .page-section-tight { padding-top: 0; }
@@ -220,6 +223,7 @@ a[data-document]:hover { background: var(--paper); border-color: var(--plum); }
   .video-card { aspect-ratio: .96; border-radius: 16px; }
   .video-card strong { margin: 0 9px 9px; }
   .page-hero-split, .page-story, .info-grid { grid-template-columns: 1fr; }
+  .branch-photo-hero h1 { font-size: clamp(2rem, 8vw, 3.6rem); }
   .page-hero-split img { margin-top: 2px; aspect-ratio: 1.56; }
   .facts { grid-template-columns: 1fr; gap: 12px; }
   .branch-photos { grid-template-columns: 1fr 1fr; }
