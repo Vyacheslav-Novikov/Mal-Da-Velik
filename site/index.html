@@ -14,7 +14,7 @@
   <link rel="preload" href="assets/fonts/onest-cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="pages.css?v=131550c2">
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="home.css?v=ca2db7d4">
   <script src="site.js" defer></script>
   <script src="home.js" defer></script>
 </head>
@@ -80,8 +80,11 @@
 
     <section class="section shell" id="program" aria-labelledby="program-title">
       <div class="section-heading program-heading">
-        <p class="eyebrow">Программа «ПРОдетей»</p>
-        <h2 id="program-title">Дети сами выбирают,<br class="wide-only"> что им интересно</h2>
+        <div>
+          <p class="eyebrow">Программа «ПРОдетей»</p>
+          <h2 id="program-title">Дети сами выбирают,<br class="wide-only"> что им интересно</h2>
+        </div>
+        <img class="program-illustration" src="assets/illustrations/program-cube.webp" alt="" width="540" height="540" loading="lazy">
       </div>
       <div class="program-layout">
         <figure class="program-photo">
@@ -154,24 +157,31 @@
       <div class="activity-preview-grid">
         <a class="activity-preview activity-preview-lego" href="activities/index.html#lego">
           <span class="activity-preview-picture" aria-hidden="true">
-            <span class="piece piece-steps"></span>
-            <img src="assets/gallery/construction-group.jpg" width="1152" height="864" alt="" loading="lazy">
+            <img class="activity-preview-icon" src="assets/activity-icons/building-brick.png" alt="" width="360" height="360" loading="lazy">
+            <img class="activity-preview-photo" src="assets/gallery/construction-group.jpg" width="1152" height="864" alt="" loading="lazy">
           </span>
           <span class="activity-preview-label">LEGO-конструирование <span aria-hidden="true">↗</span></span>
         </a>
         <a class="activity-preview activity-preview-art" href="gardens/kudrovo/activities/index.html#art">
           <span class="activity-preview-picture" aria-hidden="true">
-            <span class="piece piece-seed"></span>
-            <img src="assets/gallery/kud-paintbrushes.jpg" width="1000" height="667" alt="" loading="lazy">
+            <img class="activity-preview-icon" src="assets/activity-icons/paintbrush.png" alt="" width="360" height="360" loading="lazy">
+            <img class="activity-preview-photo" src="assets/gallery/kud-paintbrushes.jpg" width="1000" height="667" alt="" loading="lazy">
           </span>
           <span class="activity-preview-label">Арт-студия <span aria-hidden="true">↗</span></span>
         </a>
         <a class="activity-preview activity-preview-dance" href="gardens/kudrovo/activities/index.html#dance">
           <span class="activity-preview-picture" aria-hidden="true">
-            <span class="piece piece-arch"></span>
-            <img src="assets/gallery/kud-dance.jpg" width="1000" height="667" alt="" loading="lazy">
+            <img class="activity-preview-icon" src="assets/activity-icons/ballet-slipper.png" alt="" width="360" height="360" loading="lazy">
+            <img class="activity-preview-photo" src="assets/gallery/kud-dance.jpg" width="1000" height="667" alt="" loading="lazy">
           </span>
           <span class="activity-preview-label">Танцевальная студия <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="activity-preview activity-preview-school" href="gardens/murino/activities/index.html#school">
+          <span class="activity-preview-picture" aria-hidden="true">
+            <img class="activity-preview-icon" src="assets/activity-icons/open-book.png" alt="" width="360" height="360" loading="lazy">
+            <img class="activity-preview-photo" src="assets/gallery/school-preparation.jpg" width="960" height="1280" alt="" loading="lazy">
+          </span>
+          <span class="activity-preview-label">Подготовка к школе <span aria-hidden="true">↗</span></span>
         </a>
       </div>
     </section>
@@ -208,8 +218,8 @@
             <img src="assets/gallery/kud-dance.jpg" alt="" width="1000" height="667" loading="lazy">
             <span>Занятие в зале</span>
           </a>
-          <a class="photo-gallery-tile" href="assets/gallery/kon-event.webp" data-award="Кондратьевский · Праздник в саду">
-            <img src="assets/gallery/kon-event.webp" alt="" width="1100" height="733" loading="lazy">
+          <a class="photo-gallery-tile" href="assets/gallery/kondr-costume-party.jpg" data-award="Кондратьевский · Праздник в саду">
+            <img src="assets/gallery/kondr-costume-party.jpg" alt="" width="600" height="800" loading="lazy">
             <span>Праздник в саду</span>
           </a>
           <a class="photo-gallery-tile" href="assets/gallery/kud-obstacles.jpg" data-award="Кудрово · Полоса препятствий">
@@ -293,7 +303,10 @@
 
     <section class="section questions" id="questions" aria-labelledby="questions-title">
       <div class="shell questions-layout">
-        <div class="section-heading"><p class="eyebrow">Перед знакомством</p><h2 id="questions-title">Частые вопросы</h2></div>
+        <div class="section-heading questions-heading">
+          <div><p class="eyebrow">Перед знакомством</p><h2 id="questions-title">Частые вопросы</h2></div>
+          <img class="faq-illustration" src="assets/illustrations/faq-envelope.webp" alt="" width="540" height="540" loading="lazy">
+        </div>
         <div class="faq">
           <details><summary>С какого возраста принимаете детей?</summary><p>В сети есть группы для детей от 1 года до 7 лет. Возрастной состав группы и наличие мест можно уточнить у администратора филиала.</p></details>
           <details><summary>Какой у садов режим работы?</summary><p>С понедельника по пятницу. В Мурино и Кудрово с 7:00 до 20:00, на Кондратьевском проспекте с 7:30 до 19:30. О группах неполного дня расскажет администратор филиала.</p></details>
