@@ -32,14 +32,23 @@
 }
 .footer-nav a { min-height: 44px; display: inline-flex; align-items: center; text-underline-offset: 4px; font-weight: 600; }
 .footer-nav + .footer-bottom { margin-top: 6px; }
+.photo-gallery { background: var(--ivory); }
+.photo-gallery .section-heading { align-items: center; }
+.photo-gallery-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: clamp(154px, 18vw, 245px); gap: clamp(10px, 1.5vw, 20px); }
+.photo-gallery-tile { position: relative; display: flex; align-items: end; isolation: isolate; overflow: hidden; grid-column: span 3; border-radius: var(--radius); background: var(--mint); text-decoration: none; }
+.photo-gallery-tile:first-child { grid-column: span 5; grid-row: span 2; border-end-start-radius: clamp(24px, 7vw, 105px); }
+.photo-gallery-tile:nth-child(2), .photo-gallery-tile:last-child { grid-column: span 4; }
+.photo-gallery-tile img { position: absolute; inset: 0; height: 100%; object-fit: cover; transition: transform .25s; }
+.photo-gallery-tile:hover img { transform: scale(1.035); }
+.photo-gallery-tile span { position: relative; margin: clamp(9px, 1.5vw, 20px); padding: 7px 12px; border-radius: 18px; background: var(--paper); color: var(--plum); font-size: .875rem; font-weight: 700; }
 .videos { margin-top: 45px; }
 .videos .section-heading { margin-bottom: 16px; }
 .videos .section-heading .eyebrow { margin-bottom: 8px; }
 .video-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 2vw, 26px); }
 .video-card { display: grid; position: relative; isolation: isolate; min-height: 0; border-radius: 24px; overflow: hidden; aspect-ratio: 1.33; background: var(--plum); color: var(--white); text-decoration: none; }
-.video-card img { width: 100%; height: 100%; object-fit: cover; object-position: center 11%; transition: transform .25s; }
+.video-card img { position: absolute; inset-block: 0; inset-inline-end: 0; width: var(--poster-width, 100%); height: 100%; object-fit: cover; object-position: center var(--poster-position, 50%); transform-origin: var(--poster-origin, 50%) center; transition: transform .25s; }
 .video-card:hover img { transform: scale(1.035); }
-.video-card::after { content: ""; position: absolute; inset: 47% 0 0; background: linear-gradient(transparent, #28051ddb); pointer-events: none; }
+.video-card::after { content: ""; position: absolute; inset: 60% 0 0; background: linear-gradient(transparent, #28051ddb); pointer-events: none; }
 .video-card strong { position: absolute; z-index: 1; align-self: end; margin: 0 15px 13px; font-weight: 700; font-size: clamp(.9rem, 1.35vw, 1.09rem); }
 .play-circle { position: absolute; right: 13px; bottom: 11px; display: grid; place-content: center; z-index: 1; width: 50px; aspect-ratio: 1; border-radius: 100%; color: var(--plum); background: var(--paper); border: 1px solid #fff8; box-shadow: 0 3px 18px #28051d31; }
 .play-circle::before { content: ""; border-block: 8px solid transparent; border-left: 13px solid currentColor; margin-left: 4px; }
@@ -218,9 +227,14 @@ a[data-document]:hover { background: var(--paper); border-color: var(--plum); }
 @media (max-width: 600px) {
   .brand-raised { width: 122px; }
   .brand-tagline { font-size: .57rem; }
+  .photo-gallery .section-heading { align-items: start; }
+  .photo-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: clamp(140px, 36vw, 200px); }
+  .photo-gallery-grid .photo-gallery-tile { grid-column: auto; grid-row: auto; }
+  .photo-gallery-grid .photo-gallery-tile:first-child { grid-column: 1 / -1; grid-row: span 2; }
   .play-circle { width: 44px; right: 8px; bottom: 8px; }
   .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .video-card { aspect-ratio: .96; border-radius: 16px; }
+  .video-card img { object-position: center var(--poster-mobile-position, var(--poster-position, 50%)); }
   .video-card strong { margin: 0 9px 9px; }
   .page-hero-split, .page-story, .info-grid { grid-template-columns: 1fr; }
   .branch-photo-hero h1 { font-size: clamp(2rem, 8vw, 3.6rem); }
