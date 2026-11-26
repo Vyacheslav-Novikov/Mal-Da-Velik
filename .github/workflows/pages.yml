@@ -29,7 +29,7 @@ jobs:
       - name: Check out the design preview
         uses: actions/checkout@v6
         with:
-          ref: 70ab6136a9ee8bd4ffea1c38e4a2b4aa5ead5f40
+          ref: 85645bf941c4b8ee33523eec251ef6d5e8d87a86
           path: design-preview
           persist-credentials: false
       - name: Build the design preview
